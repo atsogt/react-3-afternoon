@@ -16,7 +16,7 @@ class App extends Component {
     };
 
     this.updatePost = this.updatePost.bind( this );
-    this.deletePost = this.deletePost.bind( this );
+    this.deletePostFn = this.deletePostFn.bind( this );
     this.createPost = this.createPost.bind( this );
   }
   
@@ -41,7 +41,7 @@ class App extends Component {
   
   }
 
-  deletePost(id, post) {
+  deletePostFn(id, post) {
     axios
     .delete(`https://practiceapi.devmountain.com/api/posts?id=${ id }`)
     .then(response => {
